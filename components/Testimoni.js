@@ -7,46 +7,7 @@ import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
-const Testimoni = ({
-  listTestimoni = [
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
-    },
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
-    },
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
-    },
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
-    },
-  ],
-}) => {
+const Testimoni = () => {
   const settings = {
     dots: true,
     customPaging: function (i) {
@@ -57,10 +18,10 @@ const Testimoni = ({
       );
     },
     dotsClass: "slick-dots w-max absolute mt-20  ",
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 770,
