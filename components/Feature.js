@@ -1,9 +1,11 @@
-import Image from "next/image";
 import React, { useMemo } from "react";
 import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import { attributes, react as HomeContent } from "../content/home.md";
+
+/* 
 
 const features = [
   "positionnement en temps reel de toute votre flotte accessible aussi via smartphone.",
@@ -12,7 +14,9 @@ const features = [
   "Live tracking Plus vous permet de générer plusieurs rapports (Relecture (Replaying), excès de vitesse, arrêts, écoconduite, synthèse. Par véhicule(s) et par chauffeur(s) avec l'indicateur RAG)",
 ];
 
+*/
 const Feature = () => {
+  let { title, body, fonctionnalites } = attributes;
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
@@ -23,11 +27,9 @@ const Feature = () => {
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p  y-8 my-12">
         <ScrollAnimationWrapper className="flex w-full justify-end">
           <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
-            <Image
+            <img
               src="/assets/Illustration2.png"
               alt="VPN Illustrasi"
-              layout="responsive"
-              quality={100}
               height={414}
               width={508}
             />
@@ -46,7 +48,7 @@ const Feature = () => {
               Plus service où nous offrons :
             </p>
             <ul className="text-black-500 self-start list-inside ml-8 mt-5">
-              {features.map((feature, index) => (
+              {fonctionnalites.map((feature, index) => (
                 <motion.li
                   className="relative circle-check custom-list"
                   custom={{ duration: 2 + index }}
