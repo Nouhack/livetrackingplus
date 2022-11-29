@@ -1,7 +1,7 @@
 ---
 title: Awesome kitties
 date: 2019-03-17T19:31:20.591Z
-events:
+fonctionnalites:
   - description: "positionnement en temps reel de toute votre flotte accessible aussi via smartphone."
     name: 1
   - description: "État du véhicule (en fonction, en pause, en veille, hors couverture GPRS)"
