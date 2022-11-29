@@ -3,7 +3,10 @@ import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
-import { attributes, react as HomeContent } from "../content/home.md";
+import {
+  attributes,
+  react as HomeContent,
+} from "../content/fonctionnalites.md";
 
 /* 
 

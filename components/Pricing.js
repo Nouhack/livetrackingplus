@@ -1,4 +1,6 @@
 import React, { useMemo } from "react";
+import { ReactComponent as ReactLogo } from "../public/assets/feature.svg";
+
 import * as featuresvg from "../public/assets/feature.svg";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
@@ -8,8 +10,11 @@ import Maps from "../public/assets/HugeGlobal.svg";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import { attributes, react as HomeContent } from "../content/Pourquoi.md";
 
 const Pricing = () => {
+  let { title, body, pourquoi } = attributes;
+
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   const whytochoose = [
@@ -48,17 +53,13 @@ const Pricing = () => {
               Jetons un coup d'œil aux avantages de LIVE TRACKING PLUS .
             </motion.p>
           </ScrollAnimationWrapper>
-          <div
-            className="mt-10 flex flex-row"
-            style={{ backgroundColor: "blue" }}
-          >
+          <div className="mt-10 flex flex-row">
             <ScrollAnimationWrapper className="flex justify-center w-full">
               <motion.ul
-                className="w-3/5 flex gap-8 flex-col"
+                className="w-full md:w-3/5 flex gap-8 flex-col"
                 variants={scrollAnimation}
-                style={{ backgroundColor: "yellow" }}
               >
-                {whytochoose.map((item, index) => {
+                {pourquoi.map((item, index) => {
                   return (
                     <motion.div
                       variants={scrollAnimation}
@@ -78,30 +79,24 @@ const Pricing = () => {
                           backgroundColor: "#f33855",
                         }}
                       >
-                        {item.id}
+                        {item.name}
                       </div>
                       <motion.p
                         variants={scrollAnimation}
                         className="text-xl"
                         style={{ color: "black" }}
                       >
-                        {item.text}
+                        {item.description}
                       </motion.p>
                     </motion.div>
                   );
                 })}
               </motion.ul>
               <motion.div
-                className="w-2/5"
+                className="w-full md:w-2/5 hidden md:flex"
                 variants={scrollAnimation}
-                style={{ backgroundColor: "green" }}
               >
-                <img
-                  src={featuresvg}
-                  width={100}
-                  height={100}
-                  alt="SVG logo image"
-                />
+                <ReactLogo />
               </motion.div>
             </ScrollAnimationWrapper>
           </div>
