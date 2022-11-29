@@ -5,7 +5,7 @@ date: 2019-03-17T19:31:20.591Z
 happycustomers:
   [
     {
-      thumbnail: "1-sim800l-sms-relay_schematic.png",
+      thumbnail: "img/1-sim800l-sms-relay_schematic.png",
       city: "kouba",
       country: "algeria",
       rating: 4.5,
