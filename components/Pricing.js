@@ -1,7 +1,5 @@
 import React, { useMemo } from "react";
 import { ReactComponent as ReactLogo } from "../public/assets/feature.svg";
-
-import * as featuresvg from "../public/assets/feature.svg";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
 import ButtonPrimary from "./misc/ButtonPrimary";
@@ -10,7 +8,7 @@ import Maps from "../public/assets/HugeGlobal.svg";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
-import { attributes, react as HomeContent } from "../content/Pourquoi.md";
+import { attributes, react as HomeContent } from "../content/pourquoi.md";
 
 const Pricing = () => {
   let { title, body, pourquoi } = attributes;
