@@ -44,12 +44,9 @@ const Feature = () => {
             variants={scrollAnimation}
           >
             <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
-              Les Fonctionnalites de LIVE TRACKING Plus
+              {title}
             </h3>
-            <p className="my-2 text-black-500">
-              Ayez une autre vision precise de votre flotte Avec LIVE TRACKING
-              Plus service où nous offrons :
-            </p>
+            <p className="my-2 text-black-500">{body}</p>
             <ul className="text-black-500 self-start list-inside ml-8 mt-5">
               {fonctionnalites.map((feature, index) => (
                 <motion.li

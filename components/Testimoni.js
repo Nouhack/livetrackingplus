@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { attributes, react as HomeContent } from "../content/happycustomers.md";
 
 // import react slick
 import Slider from "react-slick";
@@ -79,7 +80,7 @@ const Testimoni = ({
     ],
   };
   const [sliderRef, setSliderRef] = useState(null);
-
+  let { title, body, happycustomers } = attributes;
   return (
     <>
       <Slider
@@ -88,13 +89,13 @@ const Testimoni = ({
         ref={setSliderRef}
         className="flex items-stretch justify-items-stretch"
       >
-        {listTestimoni.map((listTestimonis, index) => (
+        {happycustomers.map((listTestimonis, index) => (
           <div className="px-3 flex items-stretch" key={index}>
             <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
               <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
                 <div className="flex order-2 xl:order-1">
                   <img
-                    src={listTestimonis.image}
+                    src={listTestimonis.thumbnail}
                     height={50}
                     width={50}
                     alt="Icon People"

@@ -1,5 +1,6 @@
 ---
 title: Les Fonctionnalites de LIVE TRACKING Plus
+body: Ayez une autre vision precise de votre flotte Avec LIVE TRACKING Plus service où nous offrons
 date: 2019-03-17T19:31:20.591Z
 fonctionnalites:
   - description: "positionnement en temps reel de toute votre flotte accessible aussi via smartphone."

@@ -13,21 +13,6 @@ const Pricing = () => {
 
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
-  const whytochoose = [
-    { id: 1, text: "Pertinence des donnees." },
-    { id: 2, text: "Les meilleurs boitiers venant des USA." },
-    {
-      id: 3,
-      text: "Rapidite et efficacite avec historique garanti, pour chaque 6 mois.",
-    },
-    { id: 4, text: "Boitier garanti pendant la duree du contrat." },
-    {
-      id: 5,
-      text: "Assistance et installation 7j/7 sur 58 wilayas par des techniciens qualifies.",
-    },
-    { id: 6, text: "Developpement et amelioration continue de la solution." },
-  ];
-
   return (
     <div
       className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14"
@@ -40,13 +25,13 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
-              Pourquoi choisir LIVE TRACKING PLUS ?
+              {title}
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
               className="leading-normal w-10/12 sm:w-7/12 lg:w-6/12 mx-auto my-2 text-center"
             >
-              Jetons un coup d'œil aux avantages de LIVE TRACKING PLUS .
+              {body}
             </motion.p>
           </ScrollAnimationWrapper>
           <div className="mt-10 flex flex-row">
