@@ -61,7 +61,7 @@ const Feature = () => {
                     },
                   }}
                 >
-                  {feature}
+                  {feature.name}
                 </motion.li>
               ))}
             </ul>
