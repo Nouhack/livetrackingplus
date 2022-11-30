@@ -7,9 +7,15 @@ import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import { attributes, react as HomeContent } from "../content/pourquoi.md";
+import {
+  attributes as happycustomers_attributes,
+  react as HomeContent2,
+} from "../content/happycustomers.md";
 
 const Pricing = () => {
   let { title, body, pourquoi } = attributes;
+  let happycustomers_title = happycustomers_attributes.title;
+  let happycustomers_body = happycustomers_attributes.body;
 
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
@@ -53,7 +59,7 @@ const Pricing = () => {
                       }}
                     >
                       <div
-                        className="p-6 px-8 rounded-tr-full rounded-br-full rounded-bl-full text-lg"
+                        className="p-6 px-8 rounded-tr-full rounded-br-full rounded-bl-full"
                         style={{
                           color: "white",
                           fontWeight: "bold",
@@ -64,7 +70,7 @@ const Pricing = () => {
                       </div>
                       <motion.p
                         variants={scrollAnimation}
-                        className="text-xl"
+                        className="text-md"
                         style={{ color: "black" }}
                       >
                         {item.description}
@@ -146,14 +152,13 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto"
             >
-              Trusted by Thousands of Happy Customer{" "}
+              {happycustomers_title}
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
               className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12"
             >
-              These are the stories of our customers who have joined us with
-              great pleasure when using this crazy feature.
+              {happycustomers_body}
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">

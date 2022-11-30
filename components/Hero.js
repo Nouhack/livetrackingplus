@@ -37,7 +37,7 @@ const Hero = ({
               Le<strong>GPS</strong> a votre service.
             </h1>
             <p className="text-black-500 mt-4 mb-6">
-              LIVE TRACHING Plus (LTP) est une solution de geolocalisation
+              LIVE TRACKING Plus (LTP) est une solution de geolocalisation
               localement developpee par Hostaplast . Grace a des algorithmes
               soigneusement elabores ,k en utilisant les dernieres technologie
               en matiere de developpement informatique.
